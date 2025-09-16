@@ -127,11 +127,7 @@ namespace Lab1
             double fallslep = 240 - teadays;
             double wakeup = 840 - dx_pract;
             double prodol = wakeup - fallslep;
-            if ((prodol >= 420) && (prodol <= 540) && (wakeup <= 420))
-            {
-                answer = true;
-
-            }
+            answer = (wakeup <= 420) && (prodol >= 420) && (prodol <= 540);
                     
 
             // end
