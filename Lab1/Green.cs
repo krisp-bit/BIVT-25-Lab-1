@@ -83,10 +83,11 @@ namespace Lab1
                 if (x < 0)
                 {
                     answer = y <= 1 + x;
+
                 }
                 else
                 {
-                    answer |= y <= 1 - x;
+                    answer = y <= 1 - x;
                 }
             }
             // end
@@ -121,15 +122,17 @@ namespace Lab1
 
             // code here
             int day = X;
-            int dix_smesh = day * 60;
-            int smehtea = ((day + 1) / 2) * Y;
-            double fallslep = 240 - smehtea;
-            double wakeup = 840 - dix_smesh;
-            double son = wakeup - fallslep;
-            if ((420 <= son && son <= 540) && (wakeup == 420))
+            int dx_pract = day * 60;
+            int teadays = ((day + 1) / 2) * Y;
+            double fallslep = 240 - teadays;
+            double wakeup = 840 - dx_pract;
+            double prodol = wakeup - fallslep;
+            if ((prodol >= 420) && (prodol <= 540) && (wakeup <= 420))
             {
                 answer = true;
-            } 
+
+            }
+                    
 
             // end
 
