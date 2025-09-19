@@ -122,13 +122,20 @@ namespace Lab1
 
             // code here
             int day = X;
-            int dx_pract = day * 60;
-            int teadays = ((day + 1) / 2) * Y;
-            double fallslep = 240 - teadays;
-            double wakeup = 840 - dx_pract;
-            double prodol = wakeup - fallslep;
-            answer = (wakeup <= 420) && (prodol >= 420) && (prodol <= 540);
-                    
+            if (X % 2 != 0)
+            {
+                day = (X / 2) + 1;
+            }
+            else
+            {
+                day = X / 2;
+            }
+            int tea_day = day * Y;
+            if ((tea_day >= 240) && (tea_day <= 360) && X >= 7)
+            {
+                answer = true;
+            }
+
 
             // end
 
